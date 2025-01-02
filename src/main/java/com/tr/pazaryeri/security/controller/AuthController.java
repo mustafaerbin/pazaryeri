@@ -22,16 +22,6 @@ public class AuthController {
         this.accountUserService = accountUserService;
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestParam String username, @RequestParam String password) {
-        try {
-            String authenticate = authenticationService.authenticate(username, password);
-            return ResponseEntity.ok(authenticate);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
-        }
-    }
-
     // http://localhost:8080/auth/init
     @GetMapping("/init")
     public String init() {

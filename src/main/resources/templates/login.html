@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+<!--      layout:decorate="~{layouts/anonymous}">-->
+<!--<head>-->
+<!--    <title>Oturum Aç</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+<!--    <div layout:fragment="content" th:remove="tag">-->
+<!--        <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 min-w-max">-->
+<!--            <div class="w-full max-w-md space-y-8">-->
+
+<!--                <div class="bg-slate-50 p-4 shadow-lg rounded-md">-->
+<!--                    <div>-->
+<!--                        <img class="mx-auto h-14 w-auto my-4" th:src="@{/images/tedaslogo-siyah.png}" alt="Kurumsal Performans ve Risk Yönetimi Sistemi"/>-->
+<!--                    </div>-->
+<!--                    <h3 class="text-center text-xl font-bold my-4">Kurumsal Performans ve Risk Yönetimi Sistemi</h3>-->
+
+<!--                    <h2 class="my-8 text-center text-2xl font-bold tracking-tight text-gray-900"-->
+<!--                        th:text="#{page.login.title}">-->
+
+<!--                    </h2>-->
+<!--                    <div class="alert alert-danger" th:if="${param.error != null}">-->
+<!--                        <p th:text="#{error.login.alert.wrongCredentials}"></p></div>-->
+<!--                    <div class="alert alert-info" th:if="${param.logout != null}">-->
+<!--                        <p th:text="#{error.login.info.logout}"></p></div>-->
+<!--                    <div class="alert alert-info" th:if="${param.pwChanged != null}">-->
+<!--                        <p th:text="#{error.login.info.pw.changed}"></p></div>-->
+<!--                    <div class="alert alert-warning" th:if="${param.expired != null}">-->
+<!--                        <p th:text="#{warning.login.sessionExpired}"></p></div>-->
+<!--                    <form class="" th:action="@{/login}" method="post" id="form-login"-->
+<!--                          novalidate="novalidate">-->
+<!--                        <div class="grid grid-cols-1 gap-4">-->
+<!--                            <div class="flex relative">-->
+<!--                                    <span class="login-input-icon">-->
+<!--                                        <span class="fa fa-user"></span>-->
+<!--                                    </span>-->
+<!--                                <input id="username" tabindex="1" name="username" type="text" required="required"-->
+<!--                                       autocomplete="username webauthn"-->
+<!--                                       class="login-input input-required" th:placeholder="#{label.kullanici.kodu}"/>-->
+<!--                            </div>-->
+
+<!--                            <div class="flex relative">-->
+<!--                                    <span class="login-input-icon">-->
+<!--                                        <span class="fa fa-lock"></span>-->
+<!--                                    </span>-->
+<!--                                <input id="password" tabindex="2" name="password" type="password" required="required"-->
+<!--                                       autocomplete="current-password webauthn"-->
+<!--                                       class="login-input input-required" th:placeholder="#{label.gnl.sifre}"/>-->
+
+<!--                            </div>-->
+<!--&lt;!&ndash;                            <div class="justify-end block flex">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a id="forgotPassword" th:href="@{/spring/auth/pw-validate}" th:text="#{label.gnl.sifremi.unuttum}"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--                            <div th:if="${session.renderCaptcha}" th:remove="tag">-->
+<!--                                <p th:text="#{label.gnl.guvenlik.kodu.aciklama}"></p>-->
+<!--                                <div class="flex relative">-->
+<!--                                    <span class="login-input-icon">-->
+<!--                                        <span class="fa fa-question"></span>-->
+<!--                                    </span>-->
+<!--                                    <input id="captcha" tabindex="3" name="captcha" type="text"-->
+<!--                                           required="required" autocomplete="new-password"-->
+<!--                                           class="login-input input-required"-->
+<!--                                           th:placeholder="#{label.gnl.guvenlik.kodu}"/>-->
+
+<!--                                </div>-->
+<!--                                <div class="flex relative">-->
+<!--                                    <div class="flex  ml-auto mr-auto">-->
+<!--                                        <img id="captcha_image" class="inline-flex" th:src="@{/spring/auth/captcha}"/>-->
+<!--                                        <span class="fa fa-refresh inline-flex" id="captcha_refresh"></span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="space-y-1 mt-6">-->
+<!--                                <button class="login-button-signin" id="button-login" name="login" type="submit"-->
+<!--                                        th:text="#{label.gnl.giris}"></button>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </form>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

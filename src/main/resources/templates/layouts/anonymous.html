@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">TEDAŞ HRYS</title>
+    <link rel="stylesheet" th:href="@{/css/tailwind.css}">
+<!--    <script th:src="@{/js/tailwind.js}"></script>-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/6.5.2/css/all.css}"/>
+</head>
+<body>
+<div id="login-layout" class="relative flex min-h-screen flex-col justify-center overflow-hidden login-layout-bg px-6 sm:py-12">
+    <div layout:fragment="content" class="content">
+        <p>Content</p>
+    </div>
+    <div th:each="item: ${destekHatti}" class="ml-auto mr-auto text-sm text-gray-500" >
+<!--        <p th:utext="${@htmlUtils.cleanHtml(item.deger)}"></p>-->
+    </div>
+    <div class="mt-4 ml-auto mr-auto text-xs text-gray-500" th:text="${version}"></div>
+</div>
+</body>
+</html>
